@@ -18,5 +18,7 @@ users.forEach(({ user, pass }) => {
         await page.locator('#password').fill(pass);
         await page.locator('#submit').click();
 
+        await page.close();
+
     });
 });
