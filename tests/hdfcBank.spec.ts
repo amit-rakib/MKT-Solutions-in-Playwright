@@ -3,8 +3,9 @@ import {test} from '@playwright/test';
 
 test('hdfc Bank Test', async({page, context}) =>{
     await page.goto('https://www.hdfcbank.com/')
+   
+   const loginButton = await page.locator("(//button[@class='desktop-login position-find btn btn-primary login-btn hide-in-mobileApp ng-scope'])[1]");
 
-   const loginButton = page.locator("(//button[@class='desktop-login position-find btn btn-primary login-btn hide-in-mobileApp ng-scope'])[1]");
    await loginButton.hover();
 
    const netBank = page.locator("//a[normalize-space()='NetBanking']")
