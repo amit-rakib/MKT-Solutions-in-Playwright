@@ -11,6 +11,11 @@ test('Select from Auto Suggestion', async({page}) => {
     // Used filter for matching the india
     await page.locator(".ui-menu-item").filter({hasText: /^India$/}).click()
 
+
+    // Dropdown
+
+    await page.locator("#dropdown-class-example").selectOption("Option2")
+
     await page.close()
     
 })
