@@ -36,5 +36,7 @@ test('hdfc Bank Test', async({page, context}) =>{
    await newPage.close()
    await page.close()
 
+   // done
+
 
 })
